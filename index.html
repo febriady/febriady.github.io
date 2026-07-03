@@ -291,7 +291,7 @@
       <p class="meta">with Agnieszka Postepska and Viola Angelini &middot; GLO Discussion Paper No.&nbsp;1731 (2026)</p>
       <details open>
         <summary>Abstract</summary>
-        <p>Using longitudinal data from Indonesia, we find that individuals who experienced childhood poverty earn returns approximately 78 percent lower than their non-poor peers, with corrected estimates of 1.5 percent versus 6.8 percent per year of schooling. This gap widens after addressing endogeneity, reflecting stronger positive selection among the poor: only those with exceptionally favorable unobserved traits attain higher education, causing OLS to overstate returns. We also document two additional channels associated with lower returns for the childhood poor: unequal learning gains per year of schooling and weaker labor-market translation of credentials. These findings suggest that expanding educational access alone is insufficient to promote equality of opportunity.</p>
+        <p>This study documents substantial heterogeneity in returns to education by childhood poverty status among Indonesian wage workers aged 15&ndash;35. Individuals who grew up poor earn only 1.5 percent per additional year of schooling, less than one-fourth of the 6.8 percent earned by those who were never poor. We estimate these returns using a control-function approach that exploits conditional heteroskedasticity for identification in the absence of exclusion restrictions. The control-function coefficient is three times larger among the poor, indicating markedly stronger positive selection into schooling in this group: only individuals with exceptionally favorable unobserved characteristics attain higher levels of education. We also present descriptive evidence of lower skill accumulation per year of schooling and more limited access to high-paying jobs among disadvantaged individuals, patterns consistent with lower marginal returns. These findings highlight the limited equalizing role of education, measured here by years of schooling.</p>
       </details>
       <figure class="keyfig carousel" id="jmpfig">
         <a id="jmpfig-link" href="jmp_fig1.png" target="_blank" rel="noopener" title="Open full size">
@@ -440,12 +440,12 @@ const JMPFIGS = [
   {src:'jmp_fig1.png',
    alt:'Line chart: mean log hourly wage by years of schooling for non-poor and childhood-poor individuals. The profiles track each other until about nine years of schooling, then fan out: wages rise steeply with schooling for the non-poor but stay nearly flat for the childhood poor.',
    cap:'<b>1 / The gap in one picture:</b> mean log hourly wage by years of schooling. Beyond junior secondary school, the wage&ndash;schooling profile climbs steeply for the non-poor but stays nearly flat for those who grew up poor.'},
-  {src:'jmp_fig2_skills.png',
-   alt:'Two-panel chart of cognitive and numeracy skill z-scores by education level for poor and non-poor. Skills rise with education for both groups, but the poor gain slightly less at each level, with the gap widest at tertiary education.',
-   cap:'<b>2 / Mechanism, unequal learning gains:</b> cognitive and numeracy skills rise with education for both groups, but the childhood poor gain less per level, and the gap is widest at tertiary education.'},
-  {src:'jmp_fig3_labormarket.png',
-   alt:'Eight-panel chart of labor market outcomes by numeracy quintile and education level. At the same education and skill level, the childhood poor are less likely to work in high-value-added services and earn lower wages, most visibly at tertiary education.',
-   cap:'<b>3 / Mechanism, weaker labor-market translation:</b> holding education and numeracy fixed, the childhood poor are less likely to hold high-value-added service jobs and earn lower wages, most visibly at tertiary level. Click any figure to open it full size.'}
+  {src:'jmp_fig2_learning.png',
+   alt:'Two-panel chart. Panel A: predicted numeracy rises with years of education for both never-poor and childhood-poor individuals, but the never-poor line is steeper. Panel B: the poor minus non-poor difference in predicted score declines with years of education, turning negative beyond about nine years.',
+   cap:'<b>2 / Mechanism, unequal learning gains:</b> predicted numeracy rises with schooling for both groups, but each year of education adds less for the childhood poor; the gap widens steadily and turns against them beyond about nine years of education.'},
+  {src:'jmp_fig3_jobs.png',
+   alt:'Six-panel chart of labor market outcomes by education level and numeracy tercile. Top row: probability of high-value-added service employment. Bottom row: probability of a top-decile wage. Within every numeracy tercile, both outcomes rise steeply with education for the non-poor but stay much flatter for the childhood poor, with the gap widest at tertiary education.',
+   cap:'<b>3 / Mechanism, weaker labor-market translation:</b> at the same education level and numeracy tercile, the childhood poor are less likely to reach high-value-added service jobs or top-decile wages, with the gap widest at tertiary education. Click any figure to open it full size.'}
 ];
 let jmpIdx = 0;
 function jmpShow(i){
