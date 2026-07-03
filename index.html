@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ade Febriady &middot; Economist</title>
+<meta name="description" content="Ade Febriady — PhD candidate in economics at the University of Groningen. Development economics, labour & education economics, poverty & inequality, climate shocks.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#ffffff;
+    --ink:#1a2230;
+    --muted:#5b6573;
+    --line:#e6e9ef;
+    --accent:#2b5d8c;        /* deep muted blue */
+    --accent-soft:#eaf1f8;
+    --card:#ffffff;
+    --band1:#23527c;
+    --band2:#3a7ca5;
+    --maxw:860px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    color:var(--ink);
+    background:var(--bg);
+    line-height:1.6;
+    font-size:16px;
+  }
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+
+  /* ---- Header band ---- */
+  header.hero{
+    background:linear-gradient(120deg,var(--band1),var(--band2));
+    color:#fff;
+    padding:54px 0 46px;
+  }
+  .hero-inner{display:flex;gap:28px;align-items:center;flex-wrap:wrap}
+  .avatar{
+    width:118px;height:118px;border-radius:50%;
+    background:rgba(255,255,255,.16);
+    border:3px solid rgba(255,255,255,.55);
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Newsreader',serif;font-size:42px;font-weight:600;color:#fff;
+    overflow:hidden;flex:0 0 auto;
+  }
+  .avatar img{width:100%;height:100%;object-fit:cover}
+  .hero h1{font-family:'Newsreader',serif;font-weight:600;font-size:2.5rem;margin:0 0 4px;letter-spacing:.3px}
+  .hero .role{font-size:1.06rem;opacity:.95;margin:0 0 12px}
+  .hero .links{display:flex;flex-wrap:wrap;gap:10px}
+  .hero .links a{
+    color:#fff;border:1px solid rgba(255,255,255,.5);
+    padding:5px 13px;border-radius:999px;font-size:.86rem;font-weight:500;
+    transition:background .15s ease;
+  }
+  .hero .links a:hover{background:rgba(255,255,255,.18);text-decoration:none}
+
+  /* ---- Nav ---- */
+  nav.bar{
+    position:sticky;top:0;z-index:5;
+    background:rgba(255,255,255,.92);backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  nav.bar .wrap{display:flex;gap:22px;padding-top:13px;padding-bottom:13px;flex-wrap:wrap}
+  nav.bar a{color:var(--muted);font-size:.9rem;font-weight:500}
+  nav.bar a:hover{color:var(--accent);text-decoration:none}
+
+  /* ---- Sections ---- */
+  section{padding:38px 0 8px}
+  h2{
+    font-family:'Newsreader',serif;font-weight:600;font-size:1.5rem;
+    margin:0 0 18px;padding-bottom:8px;border-bottom:2px solid var(--accent-soft);
+    color:var(--ink);
+  }
+  p.lead{color:var(--muted);font-size:1.04rem;margin-top:0}
+  .fields b{color:var(--ink)}
+
+  /* ---- Cards ---- */
+  .card{
+    background:var(--card);border:1px solid var(--line);border-radius:12px;
+    padding:18px 20px;margin-bottom:16px;
+    box-shadow:0 1px 2px rgba(20,30,50,.03);
+    transition:box-shadow .15s ease,border-color .15s ease;
+  }
+  .card:hover{box-shadow:0 4px 16px rgba(20,30,50,.07);border-color:#d7dde7}
+  .card.jmp{border-left:4px solid var(--accent)}
+  .tag{
+    display:inline-block;background:var(--accent-soft);color:var(--accent);
+    font-size:.72rem;font-weight:600;letter-spacing:.4px;text-transform:uppercase;
+    padding:3px 9px;border-radius:6px;margin-bottom:9px;
+  }
+  .card h3{font-size:1.1rem;margin:0 0 5px;line-height:1.4}
+  .card .meta{color:var(--muted);font-size:.9rem;margin:0 0 8px}
+  .card .actions{margin-top:10px;display:flex;gap:14px;flex-wrap:wrap;font-size:.9rem}
+  details{margin-top:6px}
+  details summary{
+    cursor:pointer;color:var(--accent);font-size:.9rem;font-weight:500;
+    list-style:none;display:inline-flex;align-items:center;gap:6px;
+  }
+  details summary::-webkit-details-marker{display:none}
+  details summary::before{content:"\25B8";font-size:.8em;transition:transform .15s ease}
+  details[open] summary::before{transform:rotate(90deg)}
+  details p{margin:8px 0 2px;color:var(--ink);font-size:.96rem}
+
+  ul.tight{margin:6px 0 14px;padding-left:20px}
+  ul.tight li{margin-bottom:6px}
+  .wip li, .talks li{color:var(--ink)}
+  .talks .where{color:var(--muted)}
+
+  /* ---- CV callout ---- */
+  .cv-callout{
+    display:flex;justify-content:space-between;align-items:center;gap:16px;
+    background:var(--accent-soft);border:1px solid #d4e3f0;border-radius:12px;
+    padding:18px 22px;flex-wrap:wrap;
+  }
+  .btn{
+    display:inline-block;background:var(--accent);color:#fff !important;
+    padding:9px 18px;border-radius:8px;font-weight:600;font-size:.92rem;
+  }
+  .btn:hover{background:#234c73;text-decoration:none}
+
+  footer{margin-top:30px;padding:26px 0 40px;border-top:1px solid var(--line);color:var(--muted);font-size:.86rem}
+
+  @media (max-width:560px){
+    .hero h1{font-size:2rem}
+    .hero-inner{gap:18px}
+    .avatar{width:92px;height:92px;font-size:34px}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap hero-inner">
+    <div class="avatar">
+      <!-- To add a photo: drop a square image named "photo.jpg" in this folder and
+           replace this line with:  <img src="photo.jpg" alt="Ade Febriady"> -->
+      AF
+    </div>
+    <div>
+      <h1>Ade Febriady</h1>
+      <p class="role">PhD Candidate in Economics &middot; University of Groningen</p>
+      <div class="links">
+        <a href="mailto:a.febriady@rug.nl">Email</a>
+        <a href="Ade_Febriady_CV.pdf">CV (PDF)</a>
+        <a href="https://www.econstor.eu/bitstream/10419/338969/1/GLO-DP-1731.pdf">Job Market Paper</a>
+        <a href="https://linkedin.com/in/ade-febriady-44418162">LinkedIn</a>
+        <!-- Add when ready: <a href="YOUR_SCHOLAR_URL">Google Scholar</a> -->
+      </div>
+    </div>
+  </div>
+</header>
+
+<nav class="bar">
+  <div class="wrap">
+    <a href="#about">About</a>
+    <a href="#jmp">Job Market Paper</a>
+    <a href="#research">Research</a>
+    <a href="#teaching">Teaching</a>
+    <a href="#cv">CV</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <section id="about">
+    <h2>About</h2>
+    <p class="lead">I am a PhD candidate in economics at the University of Groningen (expected 2027), with 5+ years of applied research at the World Bank. I use causal-inference methods on household panel data to study how poverty, education, and climate shocks shape welfare and intergenerational outcomes in developing economies.</p>
+    <p class="fields"><b>Primary fields:</b> Development economics; Labour &amp; education economics; Poverty &amp; inequality.<br>
+    <b>Secondary fields:</b> Climate shocks &amp; household welfare; Behavioral &amp; experimental economics; Applied microeconometrics.</p>
+  </section>
+
+  <section id="jmp">
+    <h2>Job Market Paper</h2>
+    <div class="card jmp">
+      <span class="tag">Job Market Paper</span>
+      <h3>The Long Shadow: Childhood Poverty and the Returns to Education</h3>
+      <p class="meta">with Agnieszka Postepska and Viola Angelini &middot; GLO Discussion Paper No.&nbsp;1731 (2026)</p>
+      <details open>
+        <summary>Abstract</summary>
+        <p>This paper documents substantial heterogeneity in the returns to education by childhood poverty status among Indonesian wage workers aged 15&ndash;35. Using the IFLS panel and the Klein&ndash;Vella control-function estimator (identification via conditional heteroskedasticity, without exclusion restrictions), we find that individuals who grew up poor earn only 1.5% per additional year of schooling &mdash; less than one-fourth of the 6.8% earned by those never poor. Stronger positive selection among the poor, together with descriptive evidence of lower skill gains per year of schooling and restricted access to high-paying jobs, helps rationalize the gap, suggesting that expanding access to schooling alone may be insufficient to promote equality.</p>
+      </details>
+      <div class="actions">
+        <a href="https://www.econstor.eu/bitstream/10419/338969/1/GLO-DP-1731.pdf">&#128196; Download PDF</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="research">
+    <h2>Research</h2>
+
+    <h3 style="font-family:'Newsreader',serif;font-weight:600;font-size:1.15rem;margin:4px 0 12px;color:var(--muted)">Working Papers</h3>
+    <div class="card">
+      <h3>The Cold Shock: Poverty Impacts of Extreme Winter in Mongolia</h3>
+      <p class="meta">with Lydia Kim &middot; Background paper, World Bank 2026 Mongolia Poverty Assessment (work in progress)</p>
+      <details>
+        <summary>Abstract</summary>
+        <p>We provide the first household-panel estimate of the poverty cost of a cold-extreme shock. A difference-in-differences design on a nationally representative HSES panel exploits spatial variation in the severity of Mongolia&rsquo;s 2023/24 <em>dzud</em>, a severe winter that killed over eight million livestock. In the worst-hit areas the <em>dzud</em> prevented a 15.2 percentage-point reduction in poverty during a major national decline; a triple difference locates the effect almost entirely among herders, whose poverty rose from 20% to 32%. Asset destruction is the principal channel &mdash; livestock income accounts for roughly 71% of herder income loss &mdash; with suggestive evidence that livestock insurance buffers the shock.</p>
+      </details>
+    </div>
+
+    <h3 style="font-family:'Newsreader',serif;font-weight:600;font-size:1.15rem;margin:18px 0 12px;color:var(--muted)">Work in Progress</h3>
+    <ul class="tight wip">
+      <li><em>In-Utero Exposure to Mongolia&rsquo;s Dzud and Long-Term Labor Market Outcomes</em> &mdash; a causal mediation analysis through educational attainment (design stage).</li>
+    </ul>
+
+    <h3 style="font-family:'Newsreader',serif;font-weight:600;font-size:1.15rem;margin:18px 0 12px;color:var(--muted)">Selected Presentations</h3>
+    <ul class="tight talks">
+      <li><em>The Long Shadow</em> &mdash; <span class="where">Asian Economic Development Conference (AEDC), ADB &amp; ADBI, HKUST, Hong Kong, Jun 2026.</span></li>
+      <li><em>The Cold Shock</em> (with L. Kim) &mdash; <span class="where">FEB PhD Conference, University of Groningen, Apr 2026.</span></li>
+      <li><em>The Long Shadow</em> &mdash; <span class="where">Dutch Economists Day (NED), Leiden University (The Hague), Oct 2025.</span></li>
+      <li><em>The Long Shadow</em> &mdash; <span class="where">Frontiers of Causal Inference &amp; Machine Learning (CIML), IMT Lucca, Jul 2025.</span></li>
+    </ul>
+  </section>
+
+  <section id="teaching">
+    <h2>Teaching</h2>
+    <ul class="tight">
+      <li><b>Lecturer, Applied Econometrics</b> &mdash; Prasetiya Mulya Business School (international undergraduate program), 2019&ndash;2022. Panel models, difference-in-differences, discrete-choice models, robust inference.</li>
+      <li><b>Lecturer, Statistics for Business Decision</b> &mdash; Gadjah Mada University (pre-MBA, international class), 2019&ndash;2020.</li>
+    </ul>
+  </section>
+
+  <section id="cv">
+    <h2>Curriculum Vitae</h2>
+    <div class="cv-callout">
+      <span>Full CV with research, professional experience, awards, and references.</span>
+      <a class="btn" href="Ade_Febriady_CV.pdf">Download CV (PDF)</a>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>
+      Faculty of Economics and Business, University of Groningen, The Netherlands<br>
+      Email: <a href="mailto:a.febriady@rug.nl">a.febriady@rug.nl</a> &middot; <a href="mailto:febriadyade@gmail.com">febriadyade@gmail.com</a><br>
+      <a href="https://linkedin.com/in/ade-febriady-44418162">LinkedIn</a>
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    &copy; <span id="yr"></span> Ade Febriady. Built as a static site &mdash; hosted on GitHub Pages.
+  </div>
+</footer>
+
+<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>
