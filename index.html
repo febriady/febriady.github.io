@@ -7,7 +7,7 @@
 <meta name="description" content="Ade Febriady — PhD candidate in economics at the University of Groningen and World Bank consultant. Development economics, poverty & inequality, education, climate shocks, and large-scale survey design.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400;1,8..60,500&display=swap" rel="stylesheet">
 <style>
   :root{
     --bg:#faf8f4;              /* warm off-white */
@@ -29,12 +29,17 @@
   html{scroll-behavior:smooth}
   body{
     margin:0;
-    font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    font-family:'Source Serif 4',Georgia,'Times New Roman',serif;
     color:var(--ink);
     background:var(--bg);
-    line-height:1.62;
-    font-size:16.5px;
+    line-height:1.68;
+    font-size:17px;
     -webkit-font-smoothing:antialiased;
+  }
+  /* UI chrome stays sans-serif */
+  nav.bar a, .links a, .roles, .tag, .lc-tag, .meta, .subhead,
+  .btn, .actions a, details summary, footer{
+    font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
   }
   ::selection{background:var(--gold-soft)}
   a{color:var(--accent);text-decoration:none}
@@ -141,7 +146,7 @@
   a.linkcard .lc-title svg{width:16px;height:16px;stroke:var(--muted);fill:none;stroke-width:1.7;
     flex:0 0 auto;margin-top:3px;transition:stroke .16s ease,transform .16s ease}
   a.linkcard:hover .lc-title svg{stroke:var(--gold);transform:translate(2px,-2px)}
-  a.linkcard .lc-desc{color:var(--muted);font-size:.9rem;margin-top:7px;line-height:1.55}
+  a.linkcard .lc-desc{color:var(--muted);font-size:.95rem;margin-top:7px;line-height:1.58}
 
   /* ---------- CV CALLOUT ---------- */
   .cv-callout{display:flex;justify-content:space-between;align-items:center;gap:18px;
