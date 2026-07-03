@@ -173,8 +173,22 @@
   figure.keyfig{margin:16px 0 4px;padding:14px 14px 10px;background:#fdfcf9;
     border:1px solid var(--line);border-radius:10px}
   figure.keyfig img{width:100%;height:auto;display:block;border-radius:4px}
+  figure.keyfig a{display:block;cursor:zoom-in}
   figure.keyfig figcaption{font-family:'Inter',sans-serif;font-size:.82rem;color:var(--muted);
     line-height:1.55;margin-top:10px}
+  .carousel{position:relative}
+  .carousel .c-btn{position:absolute;top:40%;width:36px;height:36px;border-radius:50%;
+    border:1px solid var(--line);background:rgba(255,255,255,.94);color:var(--ink);
+    font-size:1.25rem;line-height:1;cursor:pointer;box-shadow:var(--shadow);
+    display:flex;align-items:center;justify-content:center;
+    transition:border-color .15s ease,background .15s ease}
+  .carousel .c-btn:hover{border-color:var(--gold);background:#fff}
+  .carousel .c-prev{left:8px}
+  .carousel .c-next{right:8px}
+  .carousel .dots{display:flex;gap:7px;justify-content:center;margin-top:10px}
+  .carousel .dots button{width:9px;height:9px;border-radius:50%;border:0;padding:0;
+    background:var(--line);cursor:pointer;transition:background .15s ease}
+  .carousel .dots button.on{background:var(--gold)}
 
   ul.tight{margin:6px 0 14px;padding-left:20px}
   ul.tight li{margin-bottom:8px;color:var(--ink-soft)}
@@ -279,9 +293,14 @@
         <summary>Abstract</summary>
         <p>Using longitudinal data from Indonesia, we find that individuals who experienced childhood poverty earn returns approximately 78 percent lower than their non-poor peers, with corrected estimates of 1.5 percent versus 6.8 percent per year of schooling. This gap widens after addressing endogeneity, reflecting stronger positive selection among the poor: only those with exceptionally favorable unobserved traits attain higher education, causing OLS to overstate returns. We also document two additional channels associated with lower returns for the childhood poor: unequal learning gains per year of schooling and weaker labor-market translation of credentials. These findings suggest that expanding educational access alone is insufficient to promote equality of opportunity.</p>
       </details>
-      <figure class="keyfig">
-        <img src="jmp_fig1.png" alt="Line chart: mean log hourly wage by years of schooling, plotted separately for non-poor and childhood-poor individuals. The two profiles track each other until about nine years of schooling, then fan out — wages rise steeply with schooling for the non-poor but stay nearly flat for the childhood poor." loading="lazy">
-        <figcaption><b>The gap in one picture:</b> mean log hourly wage by years of schooling. Beyond junior secondary school, the wage&ndash;schooling profile climbs steeply for the non-poor but stays nearly flat for those who grew up poor (Figure 1 of the paper).</figcaption>
+      <figure class="keyfig carousel" id="jmpfig">
+        <a id="jmpfig-link" href="jmp_fig1.png" target="_blank" rel="noopener" title="Open full size">
+          <img id="jmpfig-img" src="jmp_fig1.png" alt="" loading="lazy">
+        </a>
+        <button class="c-btn c-prev" onclick="jmpNav(-1)" aria-label="Previous figure">&#8249;</button>
+        <button class="c-btn c-next" onclick="jmpNav(1)" aria-label="Next figure">&#8250;</button>
+        <div class="dots" id="jmpfig-dots"></div>
+        <figcaption id="jmpfig-cap"></figcaption>
       </figure>
       <div class="actions">
         <a href="Febriady_JMP_LongShadow.pdf">Download PDF &rarr;</a>
@@ -302,6 +321,12 @@
         <summary>Abstract</summary>
         <p>Climate shocks threaten poverty reduction, yet evidence on the poverty effects of cold extremes remains limited. This paper studies Mongolia&rsquo;s 2023/24 <em>dzud</em>, an extreme winter disaster that killed over eight million livestock in a setting where rural livelihoods remain deeply tied to pastoralism. Using the first nationally representative household panel survey to bracket a major <em>dzud</em>, we exploit spatial variation in winter severity to estimate its effects. Severe exposure prevented a 15.2 percentage-point decline in poverty in the most affected districts, despite a national poverty decline of more than 40 percent over the same period. The effect was concentrated among herders, whose poverty rose sharply while it declined for other groups. The main mechanism was asset destruction, with livestock income accounting for most of the herder income loss. Beyond herders, losses were smaller but concentrated among already-poor households through worsening food insecurity. The findings show that cold extremes can reverse poverty gains by destroying productive assets and weakening food security, even when aggregate poverty is falling.</p>
       </details>
+      <figure class="keyfig">
+        <a href="coldshock_fig.png" target="_blank" rel="noopener" title="Open full size">
+          <img src="coldshock_fig.png" alt="Three-panel difference-in-differences chart of poverty rates in 2022 and 2024 for treated and control districts, with a counterfactual trend. For all households, treated-area poverty stays flat while control-area poverty falls sharply. For herder households, treated poverty rises from 20 to 32 percent while control falls from 45 to 32 percent. For non-herder households, the difference is small and imprecise." loading="lazy">
+        </a>
+        <figcaption><b>The result in one picture:</b> poverty in treated districts stalled while control districts tracked the national decline; against the counterfactual trend, the dzud prevented a 15.2 pp drop. The middle panel shows the effect is concentrated among herders, whose poverty rose from 20 to 32 percent.</figcaption>
+      </figure>
     </div>
 
     <p class="subhead">Work in Progress</p>
@@ -410,6 +435,40 @@
 </footer>
 
 <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+<script>
+const JMPFIGS = [
+  {src:'jmp_fig1.png',
+   alt:'Line chart: mean log hourly wage by years of schooling for non-poor and childhood-poor individuals. The profiles track each other until about nine years of schooling, then fan out: wages rise steeply with schooling for the non-poor but stay nearly flat for the childhood poor.',
+   cap:'<b>1 / The gap in one picture:</b> mean log hourly wage by years of schooling. Beyond junior secondary school, the wage&ndash;schooling profile climbs steeply for the non-poor but stays nearly flat for those who grew up poor.'},
+  {src:'jmp_fig2_skills.png',
+   alt:'Two-panel chart of cognitive and numeracy skill z-scores by education level for poor and non-poor. Skills rise with education for both groups, but the poor gain slightly less at each level, with the gap widest at tertiary education.',
+   cap:'<b>2 / Mechanism, unequal learning gains:</b> cognitive and numeracy skills rise with education for both groups, but the childhood poor gain less per level, and the gap is widest at tertiary education.'},
+  {src:'jmp_fig3_labormarket.png',
+   alt:'Eight-panel chart of labor market outcomes by numeracy quintile and education level. At the same education and skill level, the childhood poor are less likely to work in high-value-added services and earn lower wages, most visibly at tertiary education.',
+   cap:'<b>3 / Mechanism, weaker labor-market translation:</b> holding education and numeracy fixed, the childhood poor are less likely to hold high-value-added service jobs and earn lower wages, most visibly at tertiary level. Click any figure to open it full size.'}
+];
+let jmpIdx = 0;
+function jmpShow(i){
+  jmpIdx = (i + JMPFIGS.length) % JMPFIGS.length;
+  const f = JMPFIGS[jmpIdx];
+  const img = document.getElementById('jmpfig-img');
+  img.src = f.src; img.alt = f.alt;
+  document.getElementById('jmpfig-link').href = f.src;
+  document.getElementById('jmpfig-cap').innerHTML = f.cap;
+  document.querySelectorAll('#jmpfig-dots button').forEach((d,k)=>d.classList.toggle('on', k===jmpIdx));
+}
+function jmpNav(d){ jmpShow(jmpIdx + d); }
+(function(){
+  const dots = document.getElementById('jmpfig-dots');
+  JMPFIGS.forEach((_,k)=>{
+    const b = document.createElement('button');
+    b.setAttribute('aria-label','Show figure '+(k+1));
+    b.onclick = ()=>jmpShow(k);
+    dots.appendChild(b);
+  });
+  jmpShow(0);
+})();
+</script>
 <script data-goatcounter="https://febriady.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </body>
 </html>
