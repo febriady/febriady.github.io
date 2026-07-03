@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ade Febriady &middot; Economist</title>
-<meta name="description" content="Ade Febriady — PhD candidate in economics at the University of Groningen and World Bank consultant. Development economics, poverty & inequality, education, climate shocks, and large-scale survey design.">
+<meta name="description" content="Ade Febriady — PhD candidate in economics at the University of Groningen and World Bank consultant, on the 2026–27 job market. Development economics, poverty & inequality, education, climate shocks, and large-scale survey design.">
 <link rel="canonical" href="https://febriady.github.io/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230e2439'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' font-weight='600' fill='%23c08a2d' text-anchor='middle'%3EAF%3C/text%3E%3C/svg%3E">
 <meta property="og:type" content="website">
@@ -108,6 +108,13 @@
   .avatar img{width:100%;height:100%;object-fit:cover;display:block}
   .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:3rem;line-height:1.04;
     margin:0 0 10px;letter-spacing:.2px}
+  .market-badge{display:inline-flex;align-items:center;gap:7px;margin:0 0 14px;
+    background:var(--gold);color:#1c1204;font-family:'Inter',sans-serif;
+    font-size:.82rem;font-weight:700;letter-spacing:.5px;text-transform:uppercase;
+    padding:6px 14px;border-radius:999px;box-shadow:0 4px 14px rgba(0,0,0,.25)}
+  .market-badge::before{content:"";width:8px;height:8px;border-radius:50%;background:#1c1204;
+    animation:pulse 2s ease-in-out infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
   .roles{margin:0 0 16px;font-size:1.04rem;line-height:1.5}
   .roles .r1{opacity:.97}
   .roles .r2{opacity:.8}
@@ -163,6 +170,11 @@
   details[open] summary::before{transform:rotate(90deg)}
   details p{margin:10px 0 2px;color:var(--ink-soft);font-size:1rem;line-height:1.66}
   .actions{margin-top:12px;display:flex;gap:16px;flex-wrap:wrap;font-size:.9rem;font-weight:600}
+  figure.keyfig{margin:16px 0 4px;padding:14px 14px 10px;background:#fdfcf9;
+    border:1px solid var(--line);border-radius:10px}
+  figure.keyfig img{width:100%;height:auto;display:block;border-radius:4px}
+  figure.keyfig figcaption{font-family:'Inter',sans-serif;font-size:.82rem;color:var(--muted);
+    line-height:1.55;margin-top:10px}
 
   ul.tight{margin:6px 0 14px;padding-left:20px}
   ul.tight li{margin-bottom:8px;color:var(--ink-soft)}
@@ -215,6 +227,7 @@
     <div class="avatar"><img src="photo.jpg" alt="Ade Febriady"></div>
     <div>
       <h1>Ade Febriady</h1>
+      <p><span class="market-badge">On the 2026&ndash;27 economics job market</span></p>
       <p class="roles">
         <span class="r1">PhD Candidate in Economics <span class="dot">&middot;</span> University of Groningen <span class="dot">&middot;</span> expected 2027</span><br>
         <span class="r2">Economist (Consultant) <span class="dot">&middot;</span> The World Bank</span>
@@ -267,6 +280,10 @@
         <summary>Abstract</summary>
         <p>Using longitudinal data from Indonesia, we find that individuals who experienced childhood poverty earn returns approximately 78 percent lower than their non-poor peers, with corrected estimates of 1.5 percent versus 6.8 percent per year of schooling. This gap widens after addressing endogeneity, reflecting stronger positive selection among the poor: only those with exceptionally favorable unobserved traits attain higher education, causing OLS to overstate returns. We also document two additional channels associated with lower returns for the childhood poor: unequal learning gains per year of schooling and weaker labor-market translation of credentials. These findings suggest that expanding educational access alone is insufficient to promote equality of opportunity.</p>
       </details>
+      <figure class="keyfig">
+        <img src="jmp_fig1.png" alt="Line chart: mean log hourly wage by years of schooling, plotted separately for non-poor and childhood-poor individuals. The two profiles track each other until about nine years of schooling, then fan out — wages rise steeply with schooling for the non-poor but stay nearly flat for the childhood poor." loading="lazy">
+        <figcaption><b>The gap in one picture:</b> mean log hourly wage by years of schooling. Beyond junior secondary school, the wage&ndash;schooling profile climbs steeply for the non-poor but stays nearly flat for those who grew up poor (Figure 1 of the paper).</figcaption>
+      </figure>
       <div class="actions">
         <a href="Febriady_JMP_LongShadow.pdf">Download PDF &rarr;</a>
         <a href="https://www.econstor.eu/bitstream/10419/338969/1/GLO-DP-1731.pdf">EconStor (GLO DP 1731) &rarr;</a>
@@ -394,5 +411,6 @@
 </footer>
 
 <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+<script data-goatcounter="https://febriady.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </body>
 </html>
