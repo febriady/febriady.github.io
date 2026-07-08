@@ -89,14 +89,9 @@
   header.hero{
     position:relative;overflow:hidden;color:#fff;
     background:
-      radial-gradient(680px 380px at 88% -8%, rgba(192,138,45,.42), transparent 62%),
-      radial-gradient(560px 420px at 8% 120%, rgba(78,140,190,.30), transparent 60%),
+      linear-gradient(90deg, rgba(10,28,46,.93) 0%, rgba(10,28,46,.80) 38%, rgba(12,32,52,.45) 70%, rgba(12,32,52,.22) 100%),
+      url('hero_banner.jpg') center 40% / cover no-repeat,
       linear-gradient(135deg,var(--navy1) 0%, var(--navy2) 100%);
-  }
-  header.hero::after{  /* faint dot texture */
-    content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;
-    background-image:radial-gradient(rgba(255,255,255,.10) 1px, transparent 1px);
-    background-size:22px 22px;mask-image:linear-gradient(180deg,#000,transparent 85%);
   }
   .hero-inner{position:relative;z-index:1;display:flex;gap:34px;align-items:center;flex-wrap:wrap;
     padding:60px 0 54px}
