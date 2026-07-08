@@ -138,6 +138,20 @@
     border-bottom:2px solid transparent;transition:color .15s ease,border-color .15s ease}
   nav.bar a:hover{color:var(--accent);border-color:var(--gold);text-decoration:none}
 
+  /* ---------- STAT STRIP ---------- */
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:34px 0 4px}
+  a.stat{display:block;background:var(--card);border:1px solid var(--line);
+    border-top:3px solid var(--gold);border-radius:12px;padding:16px 18px 14px;
+    box-shadow:var(--shadow);color:inherit;
+    transition:transform .16s ease,box-shadow .16s ease,border-color .16s ease}
+  a.stat:hover{transform:translateY(-2px);box-shadow:0 6px 22px rgba(24,42,65,.10);
+    border-color:var(--gold);text-decoration:none}
+  .stat .v{font-family:'Inter',sans-serif;font-weight:600;font-size:1.9rem;
+    color:var(--ink);line-height:1.15;letter-spacing:-.01em}
+  .stat .l{font-family:'Inter',sans-serif;font-size:.85rem;color:var(--muted);
+    margin-top:6px;line-height:1.5}
+  @media (max-width:600px){.stats{grid-template-columns:1fr;margin-top:24px}}
+
   /* ---------- SECTIONS ---------- */
   section{padding:44px 0 6px;scroll-margin-top:56px}
   .sec-head{display:flex;align-items:baseline;gap:12px;margin:0 0 20px;
@@ -275,9 +289,24 @@
 
 <main class="wrap">
 
+  <div class="stats">
+    <a class="stat" href="#jmp" aria-label="Job market paper: the returns gap">
+      <div class="v">4&times; smaller</div>
+      <div class="l">payoff per year of schooling for Indonesians who grew up poor: 1.5% vs 6.8%</div>
+    </a>
+    <a class="stat" href="#research" aria-label="The Cold Shock: herder poverty after the dzud">
+      <div class="v">20% &rarr; 32%</div>
+      <div class="l">herder poverty after Mongolia's 2023/24 extreme winter, while poverty elsewhere kept falling</div>
+    </a>
+    <a class="stat" href="#data" aria-label="Data and survey work: published survey rounds">
+      <div class="v">8 rounds</div>
+      <div class="l">of national household survey microdata designed, managed, and published with the World Bank</div>
+    </a>
+  </div>
+
   <section id="about">
     <div class="sec-head"><span class="num">01</span><h2>Profile</h2></div>
-    <p class="lead">Two children grow up in the same Indonesian village and finish the same number of years of school. Decades later, a year of that schooling pays one of them more than four times what it pays the other. The difference is not talent or effort. One of them grew up poor.</p>
+    <p class="lead">Two children grow up in the same Indonesian village and finish the same number of years of school. Decades later, a year of that schooling pays one of them more than four times what it pays the other. The difference: one of them grew up poor.</p>
     <p>I work on why disadvantage outlasts the conditions that created it. I am a PhD candidate in economics at the University of Groningen (expected 2027), supervised by Prof. dr. Viola Angelini and Dr. Agnieszka Postepska. My research examines how childhood poverty shapes the returns to education in Indonesia, and how climate shocks, such as Mongolia&rsquo;s extreme winters (<em>dzud</em>), affect poverty and inequality.</p>
     <p>I came to research from the policy side: more than five years as a consultant economist with the World Bank, working on poverty assessments, crisis monitoring, and large-scale household surveys, from instrument design and fieldwork through to published microdata. I aim for work that is rigorous and useful in equal measure.</p>
     <p class="fields"><b>Primary fields:</b> Development economics; Poverty &amp; inequality; Labour &amp; education economics; Climate shocks &amp; household welfare.<br>
