@@ -177,6 +177,8 @@
     list-style:none;display:inline-flex;align-items:center;gap:7px}
   details summary::-webkit-details-marker{display:none}
   details summary::before{content:"\25B8";color:var(--gold);font-size:.85em;transition:transform .15s ease}
+  details.figwrap{margin-top:12px}
+  details.figwrap>summary{margin-bottom:6px}
   details[open] summary::before{transform:rotate(90deg)}
   details p{margin:10px 0 2px;color:var(--ink-soft);font-size:1rem;line-height:1.66}
   .actions{margin-top:12px;display:flex;gap:16px;flex-wrap:wrap;font-size:.9rem;font-weight:600}
@@ -318,17 +320,20 @@
     <div class="card jmp">
       <span class="tag">Job Market Paper</span>
       <h3>Poverty amid Progress: The Hidden Cost of a Cold Shock in Mongolia</h3>
-      <p class="meta">with Lydia Kim &middot; Background paper, World Bank 2026 Mongolia Poverty Assessment &middot; August 2026 draft</p>
+      <p class="meta">Background paper, World Bank 2026 Mongolia Poverty Assessment &middot; August 2026 draft</p>
       <details open>
         <summary>Abstract</summary>
         <p>Mongolia&rsquo;s 2023/24 extreme winter, a <em>dzud</em>, killed one in seven of the country&rsquo;s livestock; over the two years that bracket it, poverty fell steeply even outside the capital, where one household in three herds for a living. Using the first nationally representative household panel to span a major <em>dzud</em>, we compare severely affected with less affected districts in difference-in-differences, and herders with their non-herding neighbors in a triple difference. Without the shock, poverty in severely affected districts would have fallen about 15 percentage points further and consumption would have been about 13 percent higher. The burden fell hardest on herders, whose poverty rose about 21 percentage points more than that of their non-herding neighbors and whose herds ended the winter a third smaller, through mortality rather than sale. The shock reached non-herders through food markets, where the share reporting food insecurity rose by about 80 percent of its baseline level and caloric intake fell about 12 percent. In both groups the poorest households lost most, and for non-herders poverty deepened without the headcount moving. The implied consumption loss ran four to six times the state&rsquo;s emergency spending. An anticipatory transfer to every exposed herder household, at the amount trialed before an earlier <em>dzud</em>, would have cost less than that response. As weather extremes grow more frequent, so does the risk that losses like these vanish into improving national averages.</p>
       </details>
+      <details class="figwrap">
+        <summary>Key figure</summary>
       <figure class="keyfig">
         <a href="coldshock_fig.png" target="_blank" rel="noopener" title="Open full size">
           <img src="coldshock_fig.png" alt="Three-panel difference-in-differences chart of poverty rates in 2022 and 2024 for treated and control districts, with a counterfactual trend. For all households, treated-area poverty stays flat while control-area poverty falls sharply. For herder households, treated poverty rises from 20 to 32 percent while control falls from 45 to 32 percent. For non-herder households, the difference is small and imprecise." loading="lazy">
         </a>
         <figcaption><b>The result in one picture:</b> poverty in severely affected districts stalled while less affected districts tracked the national decline; against the counterfactual trend, the dzud prevented a 15.2 pp drop. The middle panel shows the effect is concentrated among herders, whose poverty rose from 20 to 32 percent.</figcaption>
       </figure>
+      </details>
       <div class="actions">
         <a href="mailto:a.febriady@rug.nl?subject=Draft%20request%3A%20Poverty%20amid%20Progress">Draft available upon request &rarr;</a>
       </div>
@@ -346,6 +351,8 @@
         <summary>Abstract</summary>
         <p>This study documents substantial heterogeneity in returns to education by childhood poverty status among Indonesian wage workers aged 15&ndash;35. Individuals who grew up poor earn only 1.5 percent per additional year of schooling, less than one-fourth of the 6.8 percent earned by those who were never poor. We estimate these returns using a control-function approach that exploits conditional heteroskedasticity for identification in the absence of exclusion restrictions. The control-function coefficient is three times larger among the poor, indicating markedly stronger positive selection into schooling in this group: only individuals with exceptionally favorable unobserved characteristics attain higher levels of education. We also present descriptive evidence of lower skill accumulation per year of schooling and more limited access to high-paying jobs among disadvantaged individuals, patterns consistent with lower marginal returns. These findings highlight the limited equalizing role of education, measured here by years of schooling.</p>
       </details>
+      <details class="figwrap">
+        <summary>Key figures</summary>
       <figure class="keyfig carousel" id="jmpfig">
         <a id="jmpfig-link" href="jmp_fig1.png" target="_blank" rel="noopener" title="Open full size">
           <img id="jmpfig-img" src="jmp_fig1.png" alt="" loading="lazy">
@@ -355,6 +362,7 @@
         <div class="dots" id="jmpfig-dots"></div>
         <figcaption id="jmpfig-cap"></figcaption>
       </figure>
+      </details>
       <div class="actions">
         <a href="Febriady_JMP_LongShadow.pdf">Download PDF &rarr;</a>
         <a href="https://www.econstor.eu/bitstream/10419/338969/1/GLO-DP-1731.pdf">EconStor (GLO DP 1731) &rarr;</a>
@@ -364,13 +372,13 @@
 
     <p class="subhead">Work in Progress</p>
     <ul class="tight">
-      <li><em>In-Utero Exposure to Mongolia&rsquo;s Dzud and Long-Term Labor Market Outcomes</em> &mdash; a causal mediation analysis through educational attainment (design stage).</li>
+      <li><em>What the Children of the Poor Inherit: Decomposing the Poverty Penalty in Indonesia</em> &mdash; proposed third dissertation chapter. Does the adult penalty to growing up poor reflect damaged fundamentals (skills, schooling, health) or inherited constraints (capital, networks, prices)? Prospectively observed childhood poverty in the Indonesia Family Life Survey, with matching, causal mediation, and formal sensitivity analysis.</li>
     </ul>
 
     <p class="subhead">Selected Presentations</p>
     <ul class="tight">
       <li><em>The Long Shadow</em> &mdash; Asian Economic Development Conference (AEDC), ADB &amp; ADBI, HKUST, Hong Kong, Jun 2026.</li>
-      <li><em>Poverty amid Progress</em> (with L. Kim) &mdash; FEB PhD Conference, University of Groningen, Apr 2026.</li>
+      <li><em>Poverty amid Progress</em> &mdash; FEB PhD Conference, University of Groningen, Apr 2026.</li>
       <li><em>The Long Shadow</em> &mdash; Dutch Economists Day (NED), Leiden University (The Hague), Oct 2025.</li>
       <li><em>The Long Shadow</em> &mdash; Frontiers of Causal Inference &amp; Machine Learning (CIML), IMT Lucca, Jul 2025.</li>
     </ul>
