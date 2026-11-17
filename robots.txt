@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://febriady.github.io/sitemap.xml
